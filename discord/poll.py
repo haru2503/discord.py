@@ -330,7 +330,7 @@ class Poll:
     question: Union[:class:`PollMedia`, :class:`str`]
         The poll's displayed question. The text can be up to 300 characters.
     duration: :class:`datetime.timedelta`
-        The duration of the poll. Duration must be in hours.
+        The duration of the poll. Duration must be 1 hour, 4 hours, 8 hours, 24 hours, 3 days, 1 week, or 2 weeks.
     multiple: :class:`bool`
         Whether users are allowed to select more than one answer.
         Defaults to ``False``.
@@ -341,6 +341,9 @@ class Poll:
     -----------
     duration: :class:`datetime.timedelta`
         The duration of the poll.
+
+        Discord only supports specific durations: 1 hour, 4 hours, 8 hours, 24 hours, 3 days, 1 week, or 2 weeks.
+
     multiple: :class:`bool`
         Whether users are allowed to select more than one answer.
     layout_type: :class:`PollLayoutType`
